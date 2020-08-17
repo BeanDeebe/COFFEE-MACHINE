@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>CoffeeMachine.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+CoffeeMachine.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">machine</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">CoffeeMachine {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+
+        <span class="s0">int </span><span class="s1">money = </span><span class="s2">550</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">water = </span><span class="s2">400</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">milk = </span><span class="s2">540</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">beans = </span><span class="s2">120</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">cups = </span><span class="s2">9</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;The coffee machine has:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(water + </span><span class="s3">&quot; of water&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(milk + </span><span class="s3">&quot; of milk&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(beans + </span><span class="s3">&quot; of coffee beans&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(cups + </span><span class="s3">&quot; of disposable cups&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(money + </span><span class="s3">&quot; of money&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Write action (buy, fill, take): &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">String userInput = scanner.nextLine()</span><span class="s0">;</span>
+
+
+        <span class="s0">switch </span><span class="s1">(userInput) {</span>
+            <span class="s0">case </span><span class="s3">&quot;buy&quot;</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">String typeOfCoffee = scanner.nextLine()</span><span class="s0">;</span>
+                <span class="s0">switch </span><span class="s1">(typeOfCoffee) {</span>
+                    <span class="s0">case </span><span class="s3">&quot;1&quot;</span><span class="s1">:</span>
+                        <span class="s1">water = (water - </span><span class="s2">250</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">beans = (beans - </span><span class="s2">16</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">money = (money + </span><span class="s2">4</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">cups--</span><span class="s0">;</span>
+
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;The coffee machine has:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(water + </span><span class="s3">&quot; of water&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(milk + </span><span class="s3">&quot; of milk&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(beans + </span><span class="s3">&quot; of coffee beans&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(cups + </span><span class="s3">&quot; of disposable cups&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(money + </span><span class="s3">&quot; of money&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+
+                    <span class="s0">case </span><span class="s3">&quot;2&quot;</span><span class="s1">:</span>
+                        <span class="s1">water = (water - </span><span class="s2">350</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">milk = (milk - </span><span class="s2">75</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">beans = (beans - </span><span class="s2">20</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">money = (money + </span><span class="s2">7</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">cups--</span><span class="s0">;</span>
+
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;The coffee machine has:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(water + </span><span class="s3">&quot; of water&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(milk + </span><span class="s3">&quot; of milk&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(beans + </span><span class="s3">&quot; of coffee beans&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(cups + </span><span class="s3">&quot; of disposable cups&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(money + </span><span class="s3">&quot; of money&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+
+                    <span class="s0">case </span><span class="s3">&quot;3&quot;</span><span class="s1">:</span>
+                        <span class="s1">water = (water - </span><span class="s2">200</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">milk = (milk - </span><span class="s2">100</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">beans = (beans - </span><span class="s2">12</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">money = (money + </span><span class="s2">6</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">cups--</span><span class="s0">;</span>
+
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;The coffee machine has:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(water + </span><span class="s3">&quot; of water&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(milk + </span><span class="s3">&quot; of milk&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(beans + </span><span class="s3">&quot; of coffee beans&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(cups + </span><span class="s3">&quot; of disposable cups&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(money + </span><span class="s3">&quot; of money&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+            <span class="s1">}</span>
+                    <span class="s0">break;</span>
+
+                    <span class="s0">case </span><span class="s3">&quot;fill&quot;</span><span class="s1">:</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Write how many ml of water do you want to add:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">int </span><span class="s1">newWater = scanner.nextInt()</span><span class="s0">;</span>
+                        <span class="s1">water = (water + newWater)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Write how many ml of milk do you want to add:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">int </span><span class="s1">newMilk = scanner.nextInt()</span><span class="s0">;</span>
+                        <span class="s1">milk = (milk + newMilk)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Write how many grams of coffee beans do you want to add:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">int </span><span class="s1">newBeans = scanner.nextInt()</span><span class="s0">;</span>
+                        <span class="s1">beans = (beans + newBeans)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Write how many disposable cups of coffee do you want to add&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">int </span><span class="s1">newCups = scanner.nextInt()</span><span class="s0">;</span>
+                        <span class="s1">cups = (cups + newCups)</span><span class="s0">;</span>
+
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;The coffee machine has:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(water + </span><span class="s3">&quot; of water&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(milk + </span><span class="s3">&quot; of milk&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(beans + </span><span class="s3">&quot; of coffee beans&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(cups + </span><span class="s3">&quot; of disposable cups&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(money + </span><span class="s3">&quot; of money&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+
+                    <span class="s0">case </span><span class="s3">&quot;take&quot;</span><span class="s1">:</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;I gave you $&quot; </span><span class="s1">+ money)</span><span class="s0">;</span>
+                        <span class="s1">money = </span><span class="s2">0</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;The coffee machine has:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(water + </span><span class="s3">&quot; of water&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(milk + </span><span class="s3">&quot; of milk&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(beans + </span><span class="s3">&quot; of coffee beans&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(cups + </span><span class="s3">&quot; of disposable cups&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(money + </span><span class="s3">&quot; of money&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s0">break;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+</pre>
+</body>
+</html>
