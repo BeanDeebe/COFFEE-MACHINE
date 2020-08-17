@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Italic;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 package machine;\
+\
+import java.util.Scanner;\
+\
+public class CoffeeMachine \{\
+    public static void main(String[] args) \{\
+        Scanner scanner = new Scanner(System.
+\f1\i in
+\f0\i0 );\
+\
+        int money = 550;\
+        int water = 400;\
+        int milk = 540;\
+        int beans = 120;\
+        int cups = 9;\
+\
+        System.
+\f1\i out
+\f0\i0 .println("The coffee machine has:");\
+        System.
+\f1\i out
+\f0\i0 .println(water + " of water");\
+        System.
+\f1\i out
+\f0\i0 .println(milk + " of milk");\
+        System.
+\f1\i out
+\f0\i0 .println(beans + " of coffee beans");\
+        System.
+\f1\i out
+\f0\i0 .println(cups + " of disposable cups");\
+        System.
+\f1\i out
+\f0\i0 .println(money + " of money");\
+\
+        System.
+\f1\i out
+\f0\i0 .println("Write action (buy, fill, take): ");\
+\
+        String userInput = scanner.nextLine();\
+\
+\
+        switch (userInput) \{\
+            case "buy":\
+                System.
+\f1\i out
+\f0\i0 .println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:");\
+                String typeOfCoffee = scanner.nextLine();\
+                switch (typeOfCoffee) \{\
+                    case "1":\
+                        water = (water - 250);\
+                        beans = (beans - 16);\
+                        money = (money + 4);\
+                        cups--;\
+\
+                        System.
+\f1\i out
+\f0\i0 .println("The coffee machine has:");\
+                        System.
+\f1\i out
+\f0\i0 .println(water + " of water");\
+                        System.
+\f1\i out
+\f0\i0 .println(milk + " of milk");\
+                        System.
+\f1\i out
+\f0\i0 .println(beans + " of coffee beans");\
+                        System.
+\f1\i out
+\f0\i0 .println(cups + " of disposable cups");\
+                        System.
+\f1\i out
+\f0\i0 .println(money + " of money");\
+                        break;\
+\
+                    case "2":\
+                        water = (water - 350);\
+                        milk = (milk - 75);\
+                        beans = (beans - 20);\
+                        money = (money + 7);\
+                        cups--;\
+\
+                        System.
+\f1\i out
+\f0\i0 .println("The coffee machine has:");\
+                        System.
+\f1\i out
+\f0\i0 .println(water + " of water");\
+                        System.
+\f1\i out
+\f0\i0 .println(milk + " of milk");\
+                        System.
+\f1\i out
+\f0\i0 .println(beans + " of coffee beans");\
+                        System.
+\f1\i out
+\f0\i0 .println(cups + " of disposable cups");\
+                        System.
+\f1\i out
+\f0\i0 .println(money + " of money");\
+                        break;\
+\
+                    case "3":\
+                        water = (water - 200);\
+                        milk = (milk - 100);\
+                        beans = (beans - 12);\
+                        money = (money + 6);\
+                        cups--;\
+\
+                        System.
+\f1\i out
+\f0\i0 .println("The coffee machine has:");\
+                        System.
+\f1\i out
+\f0\i0 .println(water + " of water");\
+                        System.
+\f1\i out
+\f0\i0 .println(milk + " of milk");\
+                        System.
+\f1\i out
+\f0\i0 .println(beans + " of coffee beans");\
+                        System.
+\f1\i out
+\f0\i0 .println(cups + " of disposable cups");\
+                        System.
+\f1\i out
+\f0\i0 .println(money + " of money");\
+                        break;\
+            \}\
+                    break;\
+\
+                    case "fill":\
+                        System.
+\f1\i out
+\f0\i0 .println("Write how many ml of water do you want to add:");\
+                        int newWater = scanner.nextInt();\
+                        water = (water + newWater);\
+                        System.
+\f1\i out
+\f0\i0 .println("Write how many ml of milk do you want to add:");\
+                        int newMilk = scanner.nextInt();\
+                        milk = (milk + newMilk);\
+                        System.
+\f1\i out
+\f0\i0 .println("Write how many grams of coffee beans do you want to add:");\
+                        int newBeans = scanner.nextInt();\
+                        beans = (beans + newBeans);\
+                        System.
+\f1\i out
+\f0\i0 .println("Write how many disposable cups of coffee do you want to add");\
+                        int newCups = scanner.nextInt();\
+                        cups = (cups + newCups);\
+\
+                        System.
+\f1\i out
+\f0\i0 .println("The coffee machine has:");\
+                        System.
+\f1\i out
+\f0\i0 .println(water + " of water");\
+                        System.
+\f1\i out
+\f0\i0 .println(milk + " of milk");\
+                        System.
+\f1\i out
+\f0\i0 .println(beans + " of coffee beans");\
+                        System.
+\f1\i out
+\f0\i0 .println(cups + " of disposable cups");\
+                        System.
+\f1\i out
+\f0\i0 .println(money + " of money");\
+                        break;\
+\
+                    case "take":\
+                        System.
+\f1\i out
+\f0\i0 .println("I gave you $" + money);\
+                        money = 0;\
+                        System.
+\f1\i out
+\f0\i0 .println("The coffee machine has:");\
+                        System.
+\f1\i out
+\f0\i0 .println(water + " of water");\
+                        System.
+\f1\i out
+\f0\i0 .println(milk + " of milk");\
+                        System.
+\f1\i out
+\f0\i0 .println(beans + " of coffee beans");\
+                        System.
+\f1\i out
+\f0\i0 .println(cups + " of disposable cups");\
+                        System.
+\f1\i out
+\f0\i0 .println(money + " of money");\
+                        break;\
+        \}\
+    \}\
+\}\
+\
+\
+}
